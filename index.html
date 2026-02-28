@@ -442,69 +442,73 @@
                 </div>
 
                 <!-- Form Side -->
-<div class="w-full md:w-3/5 p-10">
-    <form id="bookingForm" action="https://script.google.com/macros/s/AKfycbxLFn4gxG8Jyn-aE-0iHp32jgwVe4Sa8mFQ1GYYhUUKFuwoBx2ly9c9If7Zw3ht6ouzMg/exec" method="POST" class="space-y-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_name">الاسم الكريم</label>
-                <input type="text" name="الاسم" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_phone">رقم الجوال</label>
-                <input type="tel" name="الجوال" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-left dir-ltr" placeholder="05x xxx xxxx">
-            </div>
-        </div>
-        
-        <div>
-            <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_service">نوع الخدمة المطلوبة</label>
-            <div class="relative">
-                <select name="الخدمة" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
-                    <option value="" disabled selected data-i18n="form_service_ph">اختر الخدمة...</option>
-                    <option value="الحجامة الوقائية" data-i18n="srv_1_title">الحجامة الوقائية</option>
-                    <option value="الحجامة العلاجية" data-i18n="srv_2_title">الحجامة العلاجية</option>
-                    <option value="الحجامة الرياضية" data-i18n="srv_3_title">الحجامة الرياضية</option>
-                    <option value="الباقة الملكية الشاملة" data-i18n="srv_6_title">الباقة الملكية الشاملة</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
-                    <i class="fa-solid fa-chevron-down text-sm"></i>
-                </div>
-            </div>
-        </div>
+                <div class="w-full md:w-3/5 p-10">
+                    <form id="bookingForm" onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_name">الاسم الكريم</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_phone">رقم الجوال</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-left dir-ltr" placeholder="05x xxx xxxx">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_service">نوع الخدمة المطلوبة</label>
+                            <div class="relative">
+                                <select required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
+                                    <option value="" disabled selected data-i18n="form_service_ph">اختر الخدمة...</option>
+                                    <option data-i18n="srv_1_title">الحجامة الوقائية</option>
+                                    <option data-i18n="srv_2_title">الحجامة العلاجية</option>
+                                    <option data-i18n="srv_3_title">الحجامة الرياضية</option>
+                                    <option data-i18n="srv_6_title">الباقة الملكية الشاملة</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
+                                    <i class="fa-solid fa-chevron-down text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_date">التاريخ المفضل</label>
-                <input type="date" name="التاريخ" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-right">
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_time">الوقت المفضل</label>
-                <div class="relative">
-                    <select name="الوقت" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
-                        <option value="صباحاً" data-i18n="time_morn">صباحاً (9 - 12)</option>
-                        <option value="عصراً" data-i18n="time_aft">عصراً (4 - 7)</option>
-                        <option value="مساءً" data-i18n="time_eve">مساءً (7 - 10)</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
-                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_date">التاريخ المفضل</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-right">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_time">الوقت المفضل</label>
+                                <div class="relative">
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
+                                        <option data-i18n="time_morn">صباحاً (9 - 12)</option>
+                                        <option data-i18n="time_aft">عصراً (4 - 7)</option>
+                                        <option data-i18n="time_eve">مساءً (7 - 10)</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
+                                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-dark transition duration-300 shadow-lg mt-4" data-i18n="form_btn">
+                            تأكيد الحجز المبدئي
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden text-center py-10">
+                        <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-check text-4xl text-green-500"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="success_title">تم استلام طلبك بنجاح!</h4>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="success_desc">سيقوم فريق خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد النهائي.</p>
+                        <button onclick="resetForm()" class="mt-6 text-brand-primary dark:text-brand-gold underline hover:opacity-80" data-i18n="success_btn">حجز موعد آخر</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <button type="submit" id="submitBtn" class="w-full bg-brand-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-dark transition duration-300 shadow-lg mt-4" data-i18n="form_btn">
-            تأكيد الحجز المبدئي
-        </button>
-    </form>
-
-    <div id="successMessage" class="hidden text-center py-10">
-        <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i class="fa-solid fa-check text-4xl text-green-500"></i>
-        </div>
-        <h4 class="text-2xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="success_title">تم استلام طلبك بنجاح!</h4>
-        <p class="text-gray-600 dark:text-gray-400" data-i18n="success_desc">سيقوم فريق خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد النهائي.</p>
-        <button onclick="resetForm()" class="mt-6 text-brand-primary dark:text-brand-gold underline hover:opacity-80" data-i18n="success_btn">حجز موعد آخر</button>
-    </div>
-</div>
+    </section>
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/966539353569" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#128C7E] hover:scale-110 transition-all z-50">
@@ -628,27 +632,16 @@
         }
 
         // --- 5. Form Handling ---
-     const form = document.getElementById('bookingForm');
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.innerText = "جاري الإرسال...";
+        function showSuccessMessage() {
+            document.getElementById('bookingForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+        function resetForm() {
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+        }
 
-    const formData = new FormData(form);
-    const data = new URLSearchParams(formData).toString();
-
-    fetch(form.action + "?" + data, { method: 'POST' })
-    .then(() => {
-        form.classList.add('hidden');
-        document.getElementById('successMessage').classList.remove('hidden');
-    })
-    .catch(() => {
-        alert("حدث خطأ، حاول مرة أخرى.");
-        btn.disabled = false;
-        btn.innerText = "تأكيد الحجز المبدئي";
-    });
-});
         // --- 6. Dark/Light Mode System ---
         function initTheme() {
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
