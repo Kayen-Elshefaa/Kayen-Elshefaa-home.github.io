@@ -6,33 +6,29 @@
     <title>مركز كيان الشفاء | للطب البديل والحجامة الفاخرة</title>
     <meta name="description" content="مركز كيان الشفاء للطب البديل والحجامة. نقدم تجربة علاجية فاخرة بأعلى معايير التعقيم والجودة في المملكة العربية السعودية.">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Tajawal (Arabic) & Poppins (English) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
-            darkMode: 'class', // Enable dark mode via class
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
                         brand: {
-                            darkBg: '#0f172a',  // Very dark blue/gray for dark mode bg
-                            dark: '#022c22',    // Deep Emerald
-                            primary: '#064e3b', // Primary Green
-                            light: '#10b981',   // Light Green accents
-                            gold: '#d4af37',    // Luxury Gold
+                            darkBg: '#0f172a',
+                            dark: '#022c22',
+                            primary: '#064e3b',
+                            light: '#10b981',
+                            gold: '#d4af37',
                             goldHover: '#facc15',
-                            cream: '#fbfaf8',   // Off-white for light mode
-                            cardDark: '#1e293b' // Dark mode card background
+                            cream: '#fbfaf8',
+                            cardDark: '#1e293b'
                         }
                     },
                     fontFamily: {
@@ -45,47 +41,20 @@
     </script>
 
     <style>
-        /* Base styles & Transitions */
         html { scroll-behavior: smooth; }
         body { transition: background-color 0.4s ease, color 0.4s ease; font-family: 'Tajawal', sans-serif; }
-        
-        /* Language specific fonts */
         html[lang="en"] body { font-family: 'Poppins', sans-serif; }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         .dark ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #facc15; }
-
-        /* Background Patterns */
-        .bg-pattern-light {
-            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23064e3b" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-        }
-        .bg-pattern-dark {
-            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d4af37" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-        }
-
-        .hero-overlay {
-            background: linear-gradient(135deg, rgba(2,44,34,0.95) 0%, rgba(6,78,59,0.85) 100%);
-        }
-        .dark .hero-overlay {
-            background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(2,44,34,0.9) 100%);
-        }
-
-        /* Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Direction specific utilities */
+        .bg-pattern-light { background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23064e3b" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
+        .bg-pattern-dark { background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d4af37" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
+        .hero-overlay { background: linear-gradient(135deg, rgba(2,44,34,0.95) 0%, rgba(6,78,59,0.85) 100%); }
+        .dark .hero-overlay { background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(2,44,34,0.9) 100%); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
         html[dir="ltr"] .fa-arrow-left { transform: rotate(180deg); }
         html[dir="ltr"] .dir-fix { margin-left: 0.5rem; margin-right: 0; }
         html[dir="rtl"] .dir-fix { margin-right: 0.5rem; margin-left: 0; }
@@ -93,14 +62,10 @@
 </head>
 <body class="bg-brand-cream dark:bg-brand-darkBg text-gray-800 dark:text-gray-200 overflow-x-hidden transition-colors duration-300">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent border-b border-white/10">
         <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
-            
-            <!-- Logo Area -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- ضع مسار صورتك هنا (E:\dowenlouds...) -->
                     <img src="Gemini_Generated_Image_ylm3tbylm3tbylm3.png" alt="شعار كيان الشفاء" class="h-12 w-12 object-cover rounded-full border-2 border-brand-gold shadow-sm">
                 </div>
                 <div>
@@ -108,8 +73,6 @@
                     <p class="text-xs text-brand-gold tracking-widest uppercase" data-i18n="nav_subtitle">للطب البديل والحجامة</p>
                 </div>
             </a>
-
-            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-8">
                 <a href="#home" class="text-white hover:text-brand-gold transition text-sm font-medium" data-i18n="nav_home">الرئيسية</a>
                 <a href="#about" class="text-white/80 hover:text-brand-gold transition text-sm font-medium" data-i18n="nav_about">عن المركز</a>
@@ -118,27 +81,18 @@
                 <a href="#faq" class="text-white/80 hover:text-brand-gold transition text-sm font-medium" data-i18n="nav_faq">الأسئلة الشائعة</a>
                 <a href="#book" class="bg-brand-gold text-brand-dark px-6 py-2.5 rounded-full font-bold hover:bg-brand-goldHover transition shadow-[0_0_15px_rgba(212,175,55,0.4)]" data-i18n="nav_book">احجز جلستك</a>
             </div>
-
-            <!-- Controls (Lang & Theme) & Mobile Toggle -->
             <div class="flex items-center gap-4">
-                <!-- Theme Toggle -->
                 <button onclick="toggleTheme()" class="text-white hover:text-brand-gold transition text-xl focus:outline-none w-8 h-8 flex items-center justify-center">
                     <i id="theme-icon" class="fa-solid fa-moon"></i>
                 </button>
-                
-                <!-- Language Toggle -->
                 <button onclick="toggleLang()" class="text-white hover:text-brand-gold transition text-sm font-bold border border-white/30 rounded px-2 py-1 focus:outline-none">
                     <span id="lang-text">EN</span>
                 </button>
-
-                <!-- Mobile Menu Button -->
                 <button class="lg:hidden text-white text-2xl focus:outline-none" onclick="toggleMobileMenu()">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
-        
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-primary dark:bg-gray-900 border-t border-brand-gold/20 flex-col py-4 px-6 gap-4 shadow-xl">
             <a href="#home" class="text-white hover:text-brand-gold transition text-lg" onclick="toggleMobileMenu()" data-i18n="nav_home">الرئيسية</a>
             <a href="#about" class="text-white/80 hover:text-brand-gold transition text-lg" onclick="toggleMobileMenu()" data-i18n="nav_about">عن المركز</a>
@@ -147,12 +101,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center"></div>
         <div class="absolute inset-0 w-full h-full hero-overlay"></div>
         <div class="absolute inset-0 w-full h-full bg-pattern-dark"></div>
-
         <div class="relative z-10 container mx-auto px-6 text-center reveal">
             <span class="inline-block py-1 px-4 rounded-full border border-brand-gold/50 text-brand-gold text-sm font-medium mb-6 bg-brand-gold/10 backdrop-blur-sm">
                 <i class="fa-solid fa-crown ml-2 dir-fix"></i> <span data-i18n="hero_badge">التجربة الأولى للطب البديل في المملكة</span>
@@ -173,7 +125,6 @@
                 </a>
             </div>
         </div>
-
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#about" class="text-white/50 hover:text-brand-gold transition">
                 <i class="fa-solid fa-chevron-down text-2xl"></i>
@@ -181,240 +132,15 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-white dark:bg-gray-900 relative transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- Image side -->
-                <div class="w-full lg:w-1/2 relative reveal">
-                    <div class="absolute -inset-4 border-2 border-brand-gold/30 rounded-2xl transform translate-x-4 -translate-y-4 dark:border-brand-gold/20"></div>
-                    <img src="https://honuae.com/wp-content/uploads/2025/11/wet-hijama-in-abu-dhabi-at-house-of-nature-medical-center.webp" alt="بيئة علاجية فاخرة" class="relative z-10 rounded-2xl shadow-2xl object-cover h-[500px] w-full">
-                    <div class="absolute -bottom-10 -right-10 bg-brand-dark dark:bg-gray-800 text-white p-8 rounded-2xl shadow-xl z-20 border-b-4 border-brand-gold">
-                        <div class="text-4xl font-bold text-brand-gold mb-2">+15</div>
-                        <div class="text-sm font-medium text-white/80" data-i18n="about_exp">عاماً من الخبرة<br>في الطب البديل</div>
-                    </div>
-                </div>
-
-                <!-- Text side -->
-                <div class="w-full lg:w-1/2 reveal">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-[2px] bg-brand-gold"></span>
-                        <h3 class="text-brand-gold font-bold text-lg uppercase tracking-wider" data-i18n="about_subtitle">رؤيتنا وقيمنا</h3>
-                    </div>
-                    <h2 class="text-4xl font-bold text-brand-dark dark:text-white mb-6 leading-snug" data-i18n="about_title">مفهوم جديد للحجامة،<br>حيث تلتقي الأصالة بالفخامة</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed" data-i18n="about_desc_1">
-                        نحن في "كيان الشفاء" لا نقدم مجرد جلسات علاجية، بل نقدم تجربة استشفاء متكاملة. نؤمن بأن البيئة المحيطة تلعب دوراً أساسياً في عملية الشفاء، لذلك صممنا غرفنا الفندقية الخاصة لتوفر لك أقصى درجات الخصوصية والراحة.
-                    </p>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed" data-i18n="about_desc_2">
-                        طاقمنا الطبي مرخص ومؤهل تأهيلاً عالياً، ويستخدم أدوات ذات استخدام واحد (Disposable) تفتح أمام عينيك لضمان التعقيم التام بنسبة 100%.
-                    </p>
-                    
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <li class="flex items-center gap-3 text-brand-dark dark:text-gray-200 font-medium">
-                            <i class="fa-solid fa-check-circle text-brand-gold text-xl"></i> <span data-i18n="feat_1">غرف VIP خاصة</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-brand-dark dark:text-gray-200 font-medium">
-                            <i class="fa-solid fa-check-circle text-brand-gold text-xl"></i> <span data-i18n="feat_2">أدوات ذات استخدام واحد</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-brand-dark dark:text-gray-200 font-medium">
-                            <i class="fa-solid fa-check-circle text-brand-gold text-xl"></i> <span data-i18n="feat_3">طاقم طبي مرخص</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-brand-dark dark:text-gray-200 font-medium">
-                            <i class="fa-solid fa-check-circle text-brand-gold text-xl"></i> <span data-i18n="feat_4">استشارات مجانية</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-brand-cream dark:bg-brand-darkBg relative transition-colors duration-300">
-        <div class="absolute inset-0 w-full h-full bg-pattern-light dark:bg-pattern-dark opacity-50 pointer-events-none"></div>
-        <div class="container mx-auto px-6 lg:px-12 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <span class="w-8 h-[2px] bg-brand-gold"></span>
-                    <h3 class="text-brand-gold font-bold text-lg uppercase tracking-wider" data-i18n="srv_subtitle">خدماتنا</h3>
-                    <span class="w-8 h-[2px] bg-brand-gold"></span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-brand-dark dark:text-white mb-6" data-i18n="srv_title">بروتوكولات علاجية متكاملة</h2>
-                <p class="text-gray-600 dark:text-gray-300 text-lg" data-i18n="srv_desc">اكتشف مجموعة خدماتنا المصممة خصيصاً لتلبية احتياجاتك الصحية بأعلى المعايير المهنية.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-2 shadow-lg reveal">
-                    <div class="w-16 h-16 rounded-xl bg-brand-dark dark:bg-gray-800 text-brand-gold flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-droplet"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_1_title">الحجامة الوقائية</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_1_desc">جلسات دورية لتنقية الدم من السموم، تنشيط الدورة الدموية، ورفع كفاءة الجهاز المناعي للوقاية من الأمراض.</p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-2 shadow-lg reveal" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 rounded-xl bg-brand-dark dark:bg-gray-800 text-brand-gold flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_2_title">الحجامة العلاجية</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_2_desc">بروتوكولات مخصصة لعلاج الصداع النصفي، آلام الظهر والمفاصل، الخمول، واضطرابات ضغط الدم.</p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-2 shadow-lg reveal" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 rounded-xl bg-brand-dark dark:bg-gray-800 text-brand-gold flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-person-running"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_3_title">الحجامة الرياضية</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_3_desc">مصممة خصيصاً للرياضيين لفك الشد العضلي، التخلص من حمض اللاكتيك، وتسريع الاستشفاء العضلي.</p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-2 shadow-lg reveal">
-                    <div class="w-16 h-16 rounded-xl bg-brand-dark dark:bg-gray-800 text-brand-gold flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-spa"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_4_title">المساج العلاجي</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_4_desc">جلسات تدليك عميق للأنسجة للتخلص من التوتر العضلي والعصبي بأيدي أخصائيين معتمدين.</p>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border border-gray-100 dark:border-gray-800 hover:border-brand-gold dark:hover:border-brand-gold transition-all duration-300 transform hover:-translate-y-2 shadow-lg reveal" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 rounded-xl bg-brand-dark dark:bg-gray-800 text-brand-gold flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-map-pin"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_5_title">الإبر الصينية</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_5_desc">علاج مسارات الطاقة في الجسم لتحفيز الشفاء الذاتي وتخفيف الآلام المزمنة بأمان تام.</p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="bg-white dark:bg-brand-cardDark rounded-2xl p-8 border-brand-gold border-2 transition-all duration-300 transform hover:-translate-y-2 shadow-xl reveal relative overflow-hidden" style="transition-delay: 200ms;">
-                    <div class="absolute top-4 left-4 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 rounded-full" data-i18n="best_seller">الأكثر طلباً</div>
-                    <div class="w-16 h-16 rounded-xl bg-brand-gold text-brand-dark flex items-center justify-center text-3xl mb-6 shadow-md">
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="srv_6_title">الباقة الملكية الشاملة</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="srv_6_desc">تجربة استشفاء VIP تتضمن فحص، مساج تحضيري، حجامة علاجية متكاملة، ومشروبات صحية مخصصة.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Excellence Section (Why us) -->
-    <section id="features" class="py-24 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-        <div class="container mx-auto px-6 lg:px-12 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="w-full lg:w-1/2 reveal">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                        <span data-i18n="why_title_1">لماذا</span> <span class="text-brand-gold" data-i18n="why_title_2">كيان الشفاء</span> <span data-i18n="why_title_3">هو خيارك الأول؟</span>
-                    </h2>
-                    <p class="text-gray-300 text-lg mb-10 leading-relaxed" data-i18n="why_desc">
-                        لقد أعدنا ابتكار تجربة الطب البديل لترتقي إلى تطلعات النخبة. كل تفصيل في مركزنا مصمم لضمان راحتك، أمانك، وشفائك.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div class="flex gap-4">
-                            <div class="text-brand-gold text-3xl mt-1"><i class="fa-solid fa-shield-virus"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2" data-i18n="why_1_title">تعقيم طبي صارم</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="why_1_desc">أدوات ذات استخدام واحد ومعقمة بأجهزة حديثة.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="text-brand-gold text-3xl mt-1"><i class="fa-solid fa-user-doctor"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2" data-i18n="why_2_title">نخبة الأطباء</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="why_2_desc">طاقم مرخص من المركز الوطني للطب البديل.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="text-brand-gold text-3xl mt-1"><i class="fa-solid fa-bed"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2" data-i18n="why_3_title">أجنحة VIP خاصة</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="why_3_desc">غرف علاجية مجهزة بأعلى معايير الرفاهية.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="text-brand-gold text-3xl mt-1"><i class="fa-solid fa-leaf"></i></div>
-                            <div>
-                                <h4 class="text-xl font-bold mb-2" data-i18n="why_4_title">بيئة استشفائية</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="why_4_desc">إضاءة هادئة، روائح عطرية طبيعية، وتجربة خالية من التوتر.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="w-full lg:w-1/2 reveal">
-                    <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 grid grid-cols-2 gap-8">
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-brand-gold mb-2">10k+</div>
-                            <div class="text-white/80" data-i18n="stat_1">عميل سعيد</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-brand-gold mb-2">100%</div>
-                            <div class="text-white/80" data-i18n="stat_2">أدوات معقمة</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-brand-gold mb-2">5 <i class="fa-solid fa-star text-2xl text-yellow-400"></i></div>
-                            <div class="text-white/80" data-i18n="stat_3">التقييم العام</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-bold text-brand-gold mb-2">15+</div>
-                            <div class="text-white/80" data-i18n="stat_4">أخصائي معتمد</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (New Addition) -->
-    <section id="faq" class="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-12 max-w-4xl reveal">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="faq_title">الأسئلة الشائعة</h2>
-                <p class="text-gray-600 dark:text-gray-400" data-i18n="faq_desc">كل ما تحتاج معرفته عن جلساتنا</p>
-            </div>
-            
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                    <button class="w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 text-brand-dark dark:text-white font-bold text-lg text-right focus:outline-none" onclick="toggleFaq(this)">
-                        <span data-i18n="q1">هل الحجامة مؤلمة؟</span>
-                        <i class="fa-solid fa-plus text-brand-gold transition-transform duration-300"></i>
-                    </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white dark:bg-gray-900">
-                        <p class="p-5 text-gray-600 dark:text-gray-400" data-i18n="a1">نستخدم شفرات طبية دقيقة جداً ومخصصة لإحداث خدوش سطحية غير مؤلمة تقريباً. يصفها معظم عملائنا بأنها شعور بالدغدغة أو وخز خفيف جداً، وتكون مصحوبة بشعور كبير بالراحة والاسترخاء.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-                    <button class="w-full flex justify-between items-center p-5 bg-gray-50 dark:bg-gray-800 text-brand-dark dark:text-white font-bold text-lg text-right focus:outline-none" onclick="toggleFaq(this)">
-                        <span data-i18n="q2">كم مرة يجب أن أقوم بالحجامة الوقائية؟</span>
-                        <i class="fa-solid fa-plus text-brand-gold transition-transform duration-300"></i>
-                    </button>
-                    <div class="max-h-0 overflow-hidden transition-all duration-300 bg-white dark:bg-gray-900">
-                        <p class="p-5 text-gray-600 dark:text-gray-400" data-i18n="a2">للوقاية والحفاظ على الصحة العامة، يُنصح بعمل الحجامة مرة كل 3 إلى 6 أشهر. أما للحالات العلاجية، فيقوم الطبيب بتحديد الجدول المناسب حسب الحالة.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
     <section id="book" class="py-24 bg-brand-cream dark:bg-brand-darkBg relative transition-colors duration-300">
         <div class="container mx-auto px-6 lg:px-12">
             <div class="max-w-4xl mx-auto bg-white dark:bg-brand-cardDark rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row border border-gray-100 dark:border-gray-800 reveal transition-colors duration-300">
                 
-                <!-- Info Side -->
                 <div class="bg-brand-dark text-white w-full md:w-2/5 p-10 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute inset-0 bg-pattern-dark opacity-10"></div>
                     <div class="relative z-10">
                         <h3 class="text-3xl font-bold mb-2 text-brand-gold" data-i18n="book_title">احجز جلستك</h3>
                         <p class="text-gray-300 mb-8" data-i18n="book_desc">خطوة واحدة تفصلك عن استعادة نشاطك وحيويتك. احجز الآن وسيتواصل معك فريقنا.</p>
-                        
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <i class="fa-solid fa-location-dot text-brand-gold text-xl mt-1"></i>
@@ -430,40 +156,32 @@
                                     <p class="text-sm text-gray-400 dir-ltr">+966 53 935 3569</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <i class="fa-solid fa-clock text-brand-gold text-xl mt-1"></i>
-                                <div>
-                                    <h5 class="font-bold text-lg" data-i18n="contact_time_title">أوقات العمل</h5>
-                                    <p class="text-sm text-gray-400" data-i18n="contact_time_desc">يومياً من 9 صباحاً حتى 10 مساءً</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Form Side -->
                 <div class="w-full md:w-3/5 p-10">
-                    <form id="bookingForm" onsubmit="event.preventDefault(); showSuccessMessage();" class="space-y-6">
+                    <form id="bookingForm" action="https://formspree.io/f/xkovepnn" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_name">الاسم الكريم</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition">
+                                <input type="text" name="الاسم" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_phone">رقم الجوال</label>
-                                <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-left dir-ltr" placeholder="05x xxx xxxx">
+                                <input type="tel" name="الجوال" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-left dir-ltr" placeholder="05x xxx xxxx">
                             </div>
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_service">نوع الخدمة المطلوبة</label>
                             <div class="relative">
-                                <select required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
+                                <select name="الخدمة" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
                                     <option value="" disabled selected data-i18n="form_service_ph">اختر الخدمة...</option>
-                                    <option data-i18n="srv_1_title">الحجامة الوقائية</option>
-                                    <option data-i18n="srv_2_title">الحجامة العلاجية</option>
-                                    <option data-i18n="srv_3_title">الحجامة الرياضية</option>
-                                    <option data-i18n="srv_6_title">الباقة الملكية الشاملة</option>
+                                    <option value="الحجامة الوقائية">الحجامة الوقائية</option>
+                                    <option value="الحجامة العلاجية">الحجامة العلاجية</option>
+                                    <option value="الحجامة الرياضية">الحجامة الرياضية</option>
+                                    <option value="الباقة الملكية">الباقة الملكية الشاملة</option>
                                 </select>
                                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
                                     <i class="fa-solid fa-chevron-down text-sm"></i>
@@ -474,15 +192,15 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_date">التاريخ المفضل</label>
-                                <input type="date" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-right">
+                                <input type="date" name="التاريخ" required class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition text-right">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-brand-dark dark:text-gray-300 mb-2" data-i18n="form_time">الوقت المفضل</label>
                                 <div class="relative">
-                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
-                                        <option data-i18n="time_morn">صباحاً (9 - 12)</option>
-                                        <option data-i18n="time_aft">عصراً (4 - 7)</option>
-                                        <option data-i18n="time_eve">مساءً (7 - 10)</option>
+                                    <select name="الوقت" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-white focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 outline-none transition appearance-none">
+                                        <option value="صباحاً">صباحاً (9 - 12)</option>
+                                        <option value="عصراً">عصراً (4 - 7)</option>
+                                        <option value="مساءً">مساءً (7 - 10)</option>
                                     </select>
                                     <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-gray-500">
                                         <i class="fa-solid fa-chevron-down text-sm"></i>
@@ -491,12 +209,11 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="w-full bg-brand-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-dark transition duration-300 shadow-lg mt-4" data-i18n="form_btn">
+                        <button type="submit" id="submitBtn" class="w-full bg-brand-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-brand-dark transition duration-300 shadow-lg mt-4" data-i18n="form_btn">
                             تأكيد الحجز المبدئي
                         </button>
                     </form>
 
-                    <!-- Success Message -->
                     <div id="successMessage" class="hidden text-center py-10">
                         <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i class="fa-solid fa-check text-4xl text-green-500"></i>
@@ -510,205 +227,74 @@
         </div>
     </section>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/966539353569" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#128C7E] hover:scale-110 transition-all z-50">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Footer -->
-    <footer class="bg-brand-dark pt-20 pb-10 border-t-4 border-brand-gold relative overflow-hidden text-white">
-        <div class="absolute inset-0 bg-pattern-dark opacity-5 pointer-events-none"></div>
-        <div class="container mx-auto px-6 lg:px-12 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <!-- Brand -->
-                <div class="pt-6 border-t border-white/20">
-                            <h4 class="text-lg font-bold text-white mb-4" data-i18n="social_title">منصات التواصل الاجتماعي</h4>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://instagram.com/kyanelshefaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 px-6 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity shadow-lg">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                                    <span data-i18n="social_insta">إنستجرام</span>
-                                </a>
-                                <a href="https://snapchat.com/add/kyanelshefaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#FFFC00] px-6 py-3 rounded-full text-black font-bold hover:opacity-90 transition-opacity shadow-lg">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.11 1.742c-3.14 0-5.75 2.54-5.75 5.76 0 1.02.24 1.99.66 2.86-.54.12-1.2.14-1.78.04-.26-.04-.51.12-.55.38-.05.26.12.51.38.56.97.16 2.05.02 2.89-.35.26.54.67.99 1.18 1.3-.12 1.21-.49 2.37-1.06 3.42-.16.29-.06.66.24.81.29.15.65.05.81-.24.5-.96.86-1.98 1.05-3.04-1.16.09-2.31-.05-3.4-.41-.28-.09-.58.06-.67.33-.09.28.06.58.33.67 1.3.43 2.68.56 4.05.4.61.98 1.38 1.86 2.26 2.59.08.06.18.09.28.09.09 0 .19-.03.27-.09.88-.73 1.65-1.61 2.26-2.59 1.37.16 2.75.03 4.05-.4.27-.09.42-.39.33-.67-.09-.27-.39-.42-.67-.33-1.09.36-2.24.5-3.4.41.19 1.06.55 2.08 1.05 3.04.16.29.52.4.81.24.29-.15.4-.52.24-.81-.57-1.05-.94-2.21-1.06-3.42.51-.31.92-.76 1.18-1.3.84.37 1.92.51 2.89.35.26-.05.43-.3.38-.56-.04-.26-.3-.42-.55-.38-.58.1-1.24.08-1.78-.04.42-.87.66-1.84.66-2.86-.01-3.22-2.61-5.76-5.75-5.76z"/></svg>
-                                    <span data-i18n="social_snap">سناب شات</span>
-                                </a>
-                                <a href="https://facebook.com/kyanelshefaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#1877F2] px-6 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity shadow-lg">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                                    <span data-i18n="social_fb">فيسبوك</span>
-                                </a>
-                                <a href="https://x.com/kyanelshefaa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-black px-6 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity shadow-lg border border-white/20">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.717-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                                    <span data-i18n="social_x">إكس</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-       <!-- Google Maps Link Container -->
-                <div class="h-full min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 dark:border-gray-700 fade-up bg-white/5 dark:bg-medical-darkBg flex flex-col items-center justify-center p-8 text-center" style="transition-delay: 200ms;">
-                    <svg class="w-24 h-24 text-medical-gold mb-6 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    <h3 class="text-2xl font-bold text-white mb-4" data-i18n="map_title">موقع المركز على الخريطة</h3>
-                    <p class="text-medical-light dark:text-gray-300 opacity-80 mb-8 max-w-sm leading-relaxed" data-i18n="contact_address_val">
-                        الرياض حي اشبليا - شارع الشيخ حسن بن حسين بن علي بجوار مطعم ادار
-                    </p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=الرياض+حي+اشبليا+-+شارع+الشيخ+حسن+بن+حسين+بن+علي" target="_blank" rel="noopener noreferrer" class="bg-medical-gold hover:bg-medical-goldHover text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3 w-full sm:w-auto">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 7 13 7.62 13.82.2.25.56.25.76 0C13 21 20 13.25 20 8c0-4.42-3.58-8-8-8zm0 11.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 4.5 12 4.5 15.5 6.07 15.5 8 13.93 11.5 12 11.5z"/></svg>
-                        <span data-i18n="map_btn">عرض الموقع على خرائط جوجل</span>
-                    </a>
-                </div>
-                <!-- Links -->
-                <div>
-                    <h4 class="font-bold text-lg mb-6 border-b-2 border-brand-gold/30 pb-2 inline-block" data-i18n="footer_links">روابط سريعة</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs dir-fix"></i> <span data-i18n="nav_home">الرئيسية</span></a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs dir-fix"></i> <span data-i18n="nav_about">من نحن</span></a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs dir-fix"></i> <span data-i18n="nav_services">الخدمات</span></a></li>
-                    </ul>
-                </div>
-
-                <!-- Certification -->
-                <div>
-                    <h4 class="font-bold text-lg mb-6 border-b-2 border-brand-gold/30 pb-2 inline-block" data-i18n="footer_cert">تراخيصنا</h4>
-                    <div class="bg-white/5 p-4 rounded-lg border border-white/10 text-center">
-                        <i class="fa-solid fa-certificate text-4xl text-brand-gold mb-3"></i>
-                        <p class="text-sm text-gray-300" data-i18n="footer_cert_desc">مركز معتمد ومرخص من المركز الوطني للطب البديل والتكميلي</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>&copy; 2024 كيان الشفاء. <span data-i18n="footer_copy">جميع الحقوق محفوظة.</span></p>
-            </div>
-        </div>
+    <footer class="bg-brand-dark py-10 border-t-4 border-brand-gold text-white text-center">
+        <p>© 2024 كيان الشفاء. <span data-i18n="footer_copy">جميع الحقوق محفوظة.</span></p>
     </footer>
 
-    <!-- Core JavaScript -->
     <script>
-        // --- 1. Navbar Scroll Effect ---
+        // --- Navbar Effect ---
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('bg-brand-dark', 'shadow-lg', 'py-2');
-                navbar.classList.remove('bg-transparent', 'py-4', 'border-white/10');
+                navbar.classList.remove('bg-transparent', 'py-4');
             } else {
                 navbar.classList.remove('bg-brand-dark', 'shadow-lg', 'py-2');
-                navbar.classList.add('bg-transparent', 'py-4', 'border-white/10');
+                navbar.classList.add('bg-transparent', 'py-4');
             }
         });
 
-        // --- 2. Mobile Menu ---
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        }
+        // --- Form Submission Logic ---
+        const form = document.getElementById('bookingForm');
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "جاري الإرسال...";
 
-        // --- 3. Scroll Reveal Animation ---
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) reveals[i].classList.add("active");
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
 
-        // --- 4. FAQ Accordion ---
-        function toggleFaq(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.classList.remove('fa-minus', 'rotate-180');
-                icon.classList.add('fa-plus');
+            if (response.ok) {
+                form.classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.classList.remove('fa-plus');
-                icon.classList.add('fa-minus', 'rotate-180');
+                alert("حدث خطأ، حاول مرة أخرى.");
+                btn.disabled = false;
+                btn.innerText = "تأكيد الحجز المبدئي";
             }
-        }
+        });
 
-        // --- 5. Form Handling ---
-        function showSuccessMessage() {
-            document.getElementById('bookingForm').classList.add('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
-        }
         function resetForm() {
-            document.getElementById('bookingForm').reset();
-            document.getElementById('bookingForm').classList.remove('hidden');
+            form.reset();
+            form.classList.remove('hidden');
             document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('submitBtn').disabled = false;
+            document.getElementById('submitBtn').innerText = "تأكيد الحجز المبدئي";
         }
 
-        // --- 6. Dark/Light Mode System ---
-        function initTheme() {
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
-            } else {
-                document.documentElement.classList.remove('dark');
-                document.getElementById('theme-icon').classList.replace('fa-sun', 'fa-moon');
-            }
-        }
+        // --- Theme & Reveal ---
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
             const icon = document.getElementById('theme-icon');
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.theme = 'dark';
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                localStorage.theme = 'light';
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
         }
-        initTheme();
 
-        // --- 7. Multi-Language System (i18n) ---
-        const translations = {
-            en: {
-                nav_title: "Kayan Elshefaa", nav_subtitle: "Alternative Medicine & Hijama",
-                nav_home: "Home", nav_about: "About Us", nav_services: "Services", nav_features: "Why Us", nav_faq: "FAQ", nav_book: "Book Session",
-                hero_badge: "Premium Wellness in KSA", hero_title_1: "Restore Your", hero_title_2: "Balance & Health", hero_desc: "Experience the ultimate fusion of traditional healing and modern luxury. Premium Hijama therapy with world-class sterilization protocols.",
-                hero_btn_1: "Book Now", hero_btn_2: "Explore Services",
-                about_exp: "Years of Experience", about_subtitle: "Our Vision", about_title: "Redefining Hijama with Luxury", about_desc_1: "We offer a complete wellness experience. Our VIP private rooms ensure maximum comfort and privacy.", about_desc_2: "Our medical team is certified and uses 100% disposable tools opened right in front of you.",
-                feat_1: "VIP Private Rooms", feat_2: "Disposable Tools", feat_3: "Certified Team", feat_4: "Free Consultations",
-                srv_subtitle: "Our Services", srv_title: "Holistic Healing Protocols", srv_desc: "Discover our premium services tailored to your health needs.",
-                srv_1_title: "Preventive Hijama", srv_1_desc: "Detoxify your blood and boost immunity.", srv_2_title: "Therapeutic Hijama", srv_2_desc: "Targeted relief for migraines, back pain, and fatigue.", srv_3_title: "Sports Hijama", srv_3_desc: "Accelerate muscle recovery and relieve tension.", srv_4_title: "Therapeutic Massage", srv_4_desc: "Deep tissue massage to eliminate stress.", srv_5_title: "Acupuncture", srv_5_desc: "Safe stimulation of energy pathways for pain relief.", srv_6_title: "Royal VIP Package", srv_6_desc: "A complete experience including checkup, massage, and full Hijama.", best_seller: "Best Seller",
-                why_title_1: "Why", why_title_2: "Kayan", why_title_3: "is Your #1 Choice?", why_desc: "We redesigned alternative medicine for the elite.",
-                why_1_title: "Strict Sterilization", why_1_desc: "Disposable tools & modern devices.", why_2_title: "Elite Doctors", why_2_desc: "Licensed by National Center for CAM.", why_3_title: "VIP Suites", why_3_desc: "Rooms equipped with luxury standards.", why_4_title: "Healing Environment", why_4_desc: "Calm lighting and natural aromas.",
-                stat_1: "Happy Clients", stat_2: "Sterile Tools", stat_3: "Overall Rating", stat_4: "Certified Experts",
-                faq_title: "FAQ", faq_desc: "Everything you need to know.", q1: "Is Hijama painful?", a1: "Not at all. We use ultra-fine medical blades for superficial scratches. Most clients describe it as a slight tickle.", q2: "How often should I do it?", a2: "For prevention, every 3 to 6 months is recommended.",
-                book_title: "Book Your Session", book_desc: "One step away from restoring your vitality.", contact_loc_title: "Location", contact_loc_desc: "Riyadh, Saudi Arabia", contact_phone_title: "Call Us", contact_time_title: "Working Hours", contact_time_desc: "Daily 9 AM - 10 PM",
-                form_name: "Full Name", form_phone: "Phone Number", form_service: "Select Service", form_service_ph: "Choose...", form_date: "Preferred Date", form_time: "Preferred Time", time_morn: "Morning (9-12)", time_aft: "Afternoon (4-7)", time_eve: "Evening (7-10)", form_btn: "Confirm Booking",
-                success_title: "Request Received!", success_desc: "Our team will contact you shortly.", success_btn: "Book another session",
-                footer_desc: "Your premium destination for alternative medicine.", footer_links: "Quick Links", footer_cert: "Certifications", footer_cert_desc: "Licensed by the National Center for Complementary and Alternative Medicine.", footer_copy: "All rights reserved."
-            }
-        };
-
-        let currentLang = 'ar';
-        function toggleLang() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            document.documentElement.lang = currentLang;
-            document.getElementById('lang-text').innerText = currentLang === 'ar' ? 'EN' : 'AR';
-            
-            // Translate elements
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (currentLang === 'en' && translations.en[key]) {
-                    el.dataset.arText = el.innerHTML; // save original Arabic HTML (handles inner tags like <i>)
-                    el.innerHTML = translations.en[key];
-                } else if (currentLang === 'ar' && el.dataset.arText) {
-                    el.innerHTML = el.dataset.arText;
-                }
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(el => {
+                var windowHeight = window.innerHeight;
+                var elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) el.classList.add("active");
             });
         }
+        window.addEventListener("scroll", reveal);
+        reveal();
     </script>
 </body>
 </html>
-
-
-
