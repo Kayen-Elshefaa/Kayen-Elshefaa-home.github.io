@@ -6,6 +6,9 @@
     <title>مركز كيان الشفاء | للطب البديل والحجامة الفاخرة</title>
     <meta name="description" content="مركز كيان الشفاء للطب البديل والحجامة. نقدم تجربة علاجية فاخرة بأعلى معايير التعقيم والجودة في المملكة العربية السعودية.">
     
+    <!-- تم إضافة هذا السطر لعرض اللوجو في أعلى التبويب (Favicon) -->
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_ylm3tbylm3tbylm3.png">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -89,6 +92,11 @@
         html[dir="ltr"] .fa-arrow-left { transform: rotate(180deg); }
         html[dir="ltr"] .dir-fix { margin-left: 0.5rem; margin-right: 0; }
         html[dir="rtl"] .dir-fix { margin-right: 0.5rem; margin-left: 0; }
+        
+        /* Star Rating Hover Effect */
+        .star-group:hover i { color: #facc15; }
+        .star-group i:hover ~ i { color: #e5e7eb; }
+        .dark .star-group i:hover ~ i { color: #374151; }
     </style>
 </head>
 <body class="bg-brand-cream dark:bg-brand-darkBg text-gray-800 dark:text-gray-200 overflow-x-hidden transition-colors duration-300">
@@ -100,7 +108,6 @@
             <!-- Logo Area -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <!-- ضع مسار صورتك هنا -->
                     <img src="Gemini_Generated_Image_ylm3tbylm3tbylm3.png" alt="شعار كيان الشفاء" class="h-12 w-12 object-cover rounded-full border-2 border-brand-gold shadow-sm">
                 </div>
                 <div>
@@ -413,7 +420,7 @@
                     <div class="absolute inset-0 bg-pattern-dark opacity-10"></div>
                     <div class="relative z-10">
                         <h3 class="text-3xl font-bold mb-2 text-brand-gold" data-i18n="book_title">احجز جلستك</h3>
-                        <p class="text-gray-300 mb-8" data-i18n="book_desc">خطوة واحدة تفصلك عن استعادة نشاطك وحيويتك. احجز الآن وسيتواصل معك فريقنا.</p>
+                        <p class="text-gray-300 mb-8" data-i18n="book_desc"> خطوة واحدة تفصلك عن استعادة نشاطك وحيويتك. احجز الآن وسيتواصل معك فريقنا.(مع العلم ان فتح الملف و انشاء استمارة مجاناً)</p>
                         
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
@@ -505,6 +512,30 @@
                         <p class="text-gray-600 dark:text-gray-400" data-i18n="success_desc">سيقوم فريق خدمة العملاء بالتواصل معك قريباً لتأكيد الموعد النهائي.</p>
                         <button onclick="resetForm()" class="mt-6 text-brand-primary dark:text-brand-gold underline hover:opacity-80" data-i18n="success_btn">حجز موعد آخر</button>
                     </div>
+
+                    <!-- قسم التقييم الجديد (Rate Us - Google Reviews) -->
+                    <div class="mt-10 pt-8 border-t border-gray-100 dark:border-gray-800 text-center reveal">
+                        <h4 class="text-xl font-bold text-brand-dark dark:text-white mb-2" data-i18n="rate_title">شاركنا تجربتك</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-5" data-i18n="rate_desc">رأيك يهمنا ويساعدنا على تقديم أفضل خدمة لك ولعملائنا.</p>
+                        
+                        <!-- استبدل الرابط 'ضع_رابط_تقييم_جوجل_هنا' برابط تقييم خرائط جوجل الفعلي الخاص بمركزك -->
+                        <a href="https://g.page/r/CQsIe7FqT0tWEBM/review" target="_blank" rel="noopener noreferrer" class="group block w-max mx-auto">
+                            <div class="star-group flex justify-center gap-2 mb-5 text-3xl text-brand-gold cursor-pointer transition-transform transform group-hover:scale-105">
+                                <i class="fa-solid fa-star transition-colors"></i>
+                                <i class="fa-solid fa-star transition-colors"></i>
+                                <i class="fa-solid fa-star transition-colors"></i>
+                                <i class="fa-solid fa-star transition-colors"></i>
+                                <i class="fa-solid fa-star transition-colors"></i>
+                            </div>
+                            
+                            <span class="inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 text-brand-dark dark:text-white px-6 py-2.5 rounded-full font-bold group-hover:bg-brand-gold group-hover:border-brand-gold group-hover:text-brand-dark transition-all duration-300 shadow-sm">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z"/></svg>
+                                <span data-i18n="rate_btn">قيّمنا على جوجل</span>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- نهاية قسم التقييم الجديد -->
+
                 </div>
             </div>
         </div>
@@ -722,6 +753,7 @@
                 book_title: "Book Your Session", book_desc: "One step away from restoring your vitality.", contact_loc_title: "Location", contact_loc_desc: "Riyadh, Saudi Arabia", contact_phone_title: "Call Us", contact_time_title: "Working Hours", contact_time_desc: "Daily 9 AM - 10 PM",
                 form_name: "Full Name", form_phone: "Phone Number", form_service: "Select Service", form_service_ph: "Choose...", form_date: "Preferred Date", form_time: "Preferred Time", time_morn: "Morning (9-12)", time_aft: "Afternoon (4-7)", time_eve: "Evening (7-10)", form_btn: "Confirm Booking",
                 success_title: "Request Received!", success_desc: "Our team will contact you shortly.", success_btn: "Book another session",
+                rate_title: "Share Your Experience", rate_desc: "Your feedback helps us provide the best service.", rate_btn: "Rate us on Google", /* تمت إضافة نصوص التقييم باللغة الإنجليزية */
                 footer_desc: "Your premium destination for alternative medicine.", footer_links: "Quick Links", footer_cert: "Certifications", footer_cert_desc: "Licensed by the National Center for Complementary and Alternative Medicine.", footer_copy: "All rights reserved."
             }
         };
@@ -748,4 +780,3 @@
     </script>
 </body>
 </html>
-
