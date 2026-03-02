@@ -7,7 +7,7 @@
     <meta name="description" content="مركز كيان الشفاء للطب البديل والحجامة. نقدم تجربة علاجية فاخرة بأعلى معايير التعقيم والجودة في المملكة العربية السعودية.">
     
     <!-- تم إضافة هذا السطر لعرض اللوجو في أعلى التبويب (Favicon) -->
-    <link rel="icon" type="image/png" href="kayan-elshefaa.png">
+    <link rel="icon" type="image/png" href="Gemini_Generated_Image_ylm3tbylm3tbylm3.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -427,7 +427,7 @@
                                 <i class="fa-solid fa-location-dot text-brand-gold text-xl mt-1"></i>
                                 <div>
                                     <h5 class="font-bold text-lg" data-i18n="contact_loc_title">موقعنا</h5>
-                                    <p class="text-sm text-gray-400" data-i18n="contact_loc_desc">المملكة العربية السعودية , الرياض حي اشبليا - شارع الشيخ حسن بن حسين بن علي بجوار مطعم ادار</p>
+                                    <p class="text-sm text-gray-400" data-i18n="contact_loc_desc">الرياض، المملكة العربية السعودية</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -608,8 +608,8 @@
                 </div>
             </div>
 
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>&copy; 2024 كيان الشفاء. <span data-i18n="footer_copy">جميع الحقوق محفوظة.</span></p>
+            <div class="border-t border-white/10 pt-8 flex justify-center items-center w-full text-center text-sm text-gray-400">
+                <p id="copyright-text" class="m-0"></p>
             </div>
         </div>
     </footer>
@@ -750,7 +750,7 @@
                 why_1_title: "Strict Sterilization", why_1_desc: "Disposable tools & modern devices.", why_2_title: "Elite Doctors", why_2_desc: "Licensed by National Center for CAM.", why_3_title: "VIP Suites", why_3_desc: "Rooms equipped with luxury standards.", why_4_title: "Healing Environment", why_4_desc: "Calm lighting and natural aromas.",
                 stat_1: "Happy Clients", stat_2: "Sterile Tools", stat_3: "Overall Rating", stat_4: "Certified Experts",
                 faq_title: "FAQ", faq_desc: "Everything you need to know.", q1: "Is Hijama painful?", a1: "Not at all. We use ultra-fine medical blades for superficial scratches. Most clients describe it as a slight tickle.", q2: "How often should I do it?", a2: "For prevention, every 3 to 6 months is recommended.",
-                book_title: "Book Your Session", book_desc: "One step away from restoring your vitality.(For your information, opening the file and creating the form is free)", contact_loc_title: "Location", contact_loc_desc: "Saudi Arabia و Riyadh, Ishbiliyah District - Sheikh Hassan bin Hussein bin Ali St. Next to Idar Restaurant", contact_phone_title: "Call Us", contact_time_title: "Working Hours", contact_time_desc: "Daily 9 AM - 10 PM",
+                book_title: "Book Your Session", book_desc: "One step away from restoring your vitality.", contact_loc_title: "Location", contact_loc_desc: "Riyadh, Saudi Arabia", contact_phone_title: "Call Us", contact_time_title: "Working Hours", contact_time_desc: "Daily 9 AM - 10 PM",
                 form_name: "Full Name", form_phone: "Phone Number", form_service: "Select Service", form_service_ph: "Choose...", form_date: "Preferred Date", form_time: "Preferred Time", time_morn: "Morning (9-12)", time_aft: "Afternoon (4-7)", time_eve: "Evening (7-10)", form_btn: "Confirm Booking",
                 success_title: "Request Received!", success_desc: "Our team will contact you shortly.", success_btn: "Book another session",
                 rate_title: "Share Your Experience", rate_desc: "Your feedback helps us provide the best service.", rate_btn: "Rate us on Google", /* تمت إضافة نصوص التقييم باللغة الإنجليزية */
@@ -776,10 +776,24 @@
                     el.innerHTML = el.dataset.arText;
                 }
             });
+
+            // تحديث نص حقوق الطبع والنشر عند تغيير اللغة
+            updateCopyright();
         }
+
+        // --- 8. Dynamic Copyright ---
+        function updateCopyright() {
+            const year = new Date().getFullYear(); // يجلب السنة الحالية (2026)
+            const copyrightElement = document.getElementById("copyright-text");
+            if (currentLang === 'ar') {
+                copyrightElement.innerHTML = `جميع الحقوق محفوظة &copy; ${year} مركز كيان الشفاء للحجامة`;
+            } else {
+                copyrightElement.innerHTML = `Copyright &copy; ${year} Kayan Al-Shifa Center. All Rights Reserved.`;
+            }
+        }
+        
+        // تشغيل دالة حقوق الطبع والنشر عند تحميل الصفحة لأول مرة
+        updateCopyright();
     </script>
 </body>
 </html>
-
-
-
